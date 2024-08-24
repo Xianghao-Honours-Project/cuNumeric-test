@@ -2,7 +2,7 @@
 
 #PBS -P es56
 #PBS -q dgxa100
-#PBS -l ncpus=64
+#PBS -l ncpus=128
 #PBS -l ngpus=8
 #PBS -l mem=256GB
 #PBS -l walltime=00:10:00
