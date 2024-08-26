@@ -18,8 +18,14 @@ for ngpus in 1 2 4 6 8
 do
 	echo "########## run on ${ngpus} ########"
 	
+	echo legate --profile --cpus 16 \
+                --gpus ${ngpus} --sysmem 100000 \
+                --fbmem 39000 \
+                --eager-alloc-percentage 10 \
+                --mem-usage matmul.py
+
 	legate --profile --cpus 16 \
-    		--gpus 4 --sysmem 100000 \
+    		--gpus ${ngpus} --sysmem 100000 \
     		--fbmem 39000 \
     		--eager-alloc-percentage 10 \
     		--mem-usage matmul.py
