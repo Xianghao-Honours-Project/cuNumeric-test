@@ -12,7 +12,7 @@
 
 source $HOME/.bashrc
 
-conda activate legate
+conda activate tensorflow-gpu
 
 ngpus=4
 
